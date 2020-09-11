@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import GradientHeader from "./components/GradientHeader.js";
+import Gradients from "./components/Gradients";
+import { gradients } from "./gradients";
+import Footer from "./components/Footer.js";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <GradientHeader list={gradients}>
+        <h1 className="display-1">Alyra Gradients</h1>
+        <p className="tagline">Ultime collection de plus beaux dégradés</p>
+      </GradientHeader>
+      <Gradients />
+      <Footer />
     </div>
   );
 }
